@@ -79,7 +79,7 @@ def example_step_by_step():
     analyzer = DocumentAnalyzer()
     results = analyzer.analyze_step_by_step(document)
     
-    print("\n📄 Input Document:")
+    print("\nInput Document:")
     print(document.strip())
     
     print("\n" + "-" * 70)

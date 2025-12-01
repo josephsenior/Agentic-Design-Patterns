@@ -261,5 +261,5 @@ if __name__ == "__main__":
         if result["success"]:
             print(f"\nAnswer: {result['answer']}")
         else:
-            print(f"\n❌ Error: {result.get('error', 'Unknown error')}")
+            print(f"\nError: {result.get('error', 'Unknown error')}")
 
