@@ -185,6 +185,6 @@ if __name__ == "__main__":
         "I found that AI is transforming healthcare. Can you write about this?"
     )
     
-    print(f"\n💬 Request: {result['request']['content']}")
-    print(f"💬 Response: {result['response']['content'][:100]}...")
+    print(f"\nRequest: {result['request']['content']}")
+    print(f"Response: {result['response']['content'][:100]}...")
 
