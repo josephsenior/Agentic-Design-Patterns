@@ -178,7 +178,7 @@ if __name__ == "__main__":
     hub.register_agent(editor)
     
     # Test communication
-    print("\n📡 Testing agent communication...")
+    print("\nTesting agent communication...")
     result = hub.send_message(
         "researcher",
         "writer",
