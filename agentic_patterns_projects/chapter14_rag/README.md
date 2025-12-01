@@ -12,6 +12,8 @@ RAG enables:
 - Accurate information from knowledge base
 - Scalable knowledge management
 
+Instead of relying only on what the LLM knows, RAG lets you give it access to your own documents. It finds relevant information from your knowledge base and uses that to generate accurate, context-aware answers.
+
 ## Architecture
 
 ```
@@ -23,6 +25,8 @@ Question
     ↓
 Answer
 ```
+
+First, it searches your documents to find relevant information. Then it uses that information along with the question to generate an answer. This means the answers are grounded in your actual data, not just general knowledge.
 
 ## Installation
 
@@ -41,10 +45,13 @@ result = rag.query("Your question here")
 print(result["answer"])
 ```
 
+Load your documents, ask questions, and get answers based on what's actually in your documents. You can add more documents anytime, and the system will use them for future queries.
+
 ## Features
 
-- Vector-based retrieval
-- Document chunking
-- Context-aware generation
-- Extensible knowledge base
+- Vector-based retrieval (finds relevant documents quickly)
+- Document chunking (handles long documents efficiently)
+- Context-aware generation (uses retrieved info in answers)
+- Extensible knowledge base (add documents as you go)
 
+The system uses vector embeddings to find the most relevant parts of your documents, then includes that context when generating answers. This makes responses much more accurate and specific to your data.

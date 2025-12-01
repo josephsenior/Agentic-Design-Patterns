@@ -12,12 +12,16 @@ MCP enables:
 - Resource access
 - Protocol-based interaction
 
+Think of MCP as a common language that agents can use to talk to each other and share tools. Instead of each agent having its own way of doing things, they all speak the same protocol, which makes it much easier to build systems with multiple agents working together.
+
 ## Features
 
-- MCP server implementation
-- MCP client
-- Tool registration
-- Resource management
+- MCP server implementation (agents can register as servers)
+- MCP client (agents can connect to servers)
+- Tool registration (share tools between agents)
+- Resource management (access shared resources)
+
+This is a simplified implementation to show the concept. A full MCP setup might use specialized libraries, but this gives you the core idea of how agents can communicate and share capabilities.
 
 ## Installation
 
@@ -37,7 +41,4 @@ client.connect_server(server)
 result = client.call_tool("my_server", "tool_name")
 ```
 
-## Note
-
-This is a simplified implementation. Full MCP requires additional protocol setup and may use specialized libraries.
-
+Agents can register tools they have, and other agents can use those tools. It's like having a shared toolbox that everyone can access.

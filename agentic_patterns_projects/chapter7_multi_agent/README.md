@@ -12,12 +12,16 @@ The Multi-Agent Collaboration Pattern enables:
 - Task delegation
 - Result synthesis
 
+Instead of one agent trying to do everything, you have a team where each agent is really good at one thing. They work together, passing work between them, to produce something better than any single agent could create alone.
+
 ## Team Members
 
 1. **Researcher**: Gathers information and conducts research
 2. **Writer**: Creates content based on research
 3. **Editor**: Reviews and improves content
 4. **Coordinator**: Synthesizes team outputs
+
+Each agent has a specific role, just like a real team. The researcher finds the information, the writer creates the content, the editor polishes it, and the coordinator brings it all together.
 
 ## Architecture
 
@@ -51,3 +55,4 @@ result = team.collaborate(
 )
 ```
 
+The team works together automatically. You give them a task and requirements, and they handle the rest, coordinating between themselves to produce the final result.

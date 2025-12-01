@@ -12,12 +12,16 @@ Human-in-the-Loop enables:
 - Conversation tracking
 - Support workflow management
 
+Sometimes the agent can handle things on its own. Sometimes it needs human help. This pattern knows when to escalate and how to hand off smoothly to a human operator.
+
 ## Features
 
-- Escalation decision making
-- Conversation history
-- Auto-escalation after N interactions
-- Support workflow
+- Escalation decision making (knows when to ask for help)
+- Conversation history (keeps track of what was discussed)
+- Auto-escalation after N interactions (escalates if it's taking too long)
+- Support workflow (smooth handoff to humans)
+
+The agent tries to help first, but if it's stuck or the situation is too complex, it escalates to a human. It keeps the full conversation history so the human knows what's been tried.
 
 ## Installation
 
@@ -36,3 +40,4 @@ if result["escalated"]:
     print("Transferring to human...")
 ```
 
+The agent handles what it can, and escalates when it needs to. You can configure when escalation happens - after a certain number of interactions, or when confidence is low, or based on specific triggers.

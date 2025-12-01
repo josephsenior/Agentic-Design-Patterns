@@ -11,6 +11,8 @@ The Routing Pattern allows a coordinator agent to analyze incoming requests and 
 - Multi-domain assistants
 - Request classification and routing
 
+Think of it like a smart receptionist who knows exactly which department to send your question to.
+
 ## Architecture
 
 ```
@@ -45,3 +47,4 @@ print(result)
 - **Information Requests**: "What is the weather?", "Tell me about..."
 - **Unclear Requests**: Handled with clarification prompts
 
+The router is smart enough to figure out what you're asking for and send it to the right handler. If it's not sure, it'll ask for clarification rather than guessing.

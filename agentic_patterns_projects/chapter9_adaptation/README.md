@@ -12,12 +12,16 @@ Adaptation enables:
 - Performance improvement
 - Experience-based adaptation
 
+This is what makes an agent get better over time. Instead of always doing things the same way, it learns from what works and what doesn't. Give it feedback, and it'll adjust its approach for next time.
+
 ## Features
 
-- Feedback integration
-- Pattern learning
-- Performance tracking
-- Adaptive responses
+- Feedback integration (learns from what you tell it)
+- Pattern learning (recognizes what works in different situations)
+- Performance tracking (keeps track of how well it's doing)
+- Adaptive responses (adjusts based on what it's learned)
+
+The more you use it and give feedback, the better it gets. It's like training a teammate who actually remembers and improves.
 
 ## Installation
 
@@ -35,3 +39,4 @@ result = agent.process("Your query")
 agent.provide_feedback(result['interaction_id'], 4.5, "Great response!")
 ```
 
+After you provide feedback, the agent uses it to improve future responses. Rate something highly, and it'll do more of that. Give negative feedback, and it'll adjust.

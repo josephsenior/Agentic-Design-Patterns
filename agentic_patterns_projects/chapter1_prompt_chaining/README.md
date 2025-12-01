@@ -29,6 +29,8 @@ Final JSON Report
 
 ## Installation
 
+Getting started is straightforward:
+
 1. Install dependencies:
 ```bash
 pip install -r requirements.txt
@@ -54,7 +56,7 @@ print(result)
 
 ### Example
 
-See `example.py` for a complete working example.
+Check out `example.py` for a complete working example that shows how to use the analyzer in different scenarios.
 
 ## Project Structure
 
@@ -75,5 +77,4 @@ Each step in the pipeline:
 - Passes structured output to the next step
 - Can be independently tested and optimized
 
-This modular approach improves reliability and makes the system easier to debug and maintain.
-
+This modular approach improves reliability and makes the system easier to debug and maintain. You can also use the `analyze_step_by_step()` method to see what happens at each stage, which is really helpful when you're trying to understand how the pipeline works or debug issues.

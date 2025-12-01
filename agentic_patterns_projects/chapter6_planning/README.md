@@ -12,6 +12,8 @@ The Planning Pattern enables:
 - Dependency management
 - Step-by-step execution
 
+This is like having a project manager that takes your big, vague goal and turns it into a clear step-by-step plan. Then it can execute that plan for you, checking off tasks as it goes.
+
 ## Architecture
 
 ```
@@ -41,8 +43,9 @@ result = planner.plan_and_execute("Your goal here", execute=True)
 
 ## Features
 
-- Automatic plan generation
-- Task dependency tracking
-- Sequential execution
-- Execution results tracking
+- Automatic plan generation (breaks down goals intelligently)
+- Task dependency tracking (knows what needs to happen first)
+- Sequential execution (runs tasks in the right order)
+- Execution results tracking (keeps track of what's done)
 
+You can use it just to create a plan, or you can have it execute the plan automatically. The planner understands dependencies, so if task 3 depends on task 1, it'll make sure task 1 happens first.

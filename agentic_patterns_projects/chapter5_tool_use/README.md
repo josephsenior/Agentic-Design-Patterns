@@ -13,12 +13,16 @@ The Tool Use Pattern enables agents to:
 - Execute code
 - Interact with databases
 
+Think of tools as superpowers for your agent. The LLM can reason and generate text, but tools let it actually do things like search the web, calculate math, or check the current time.
+
 ## Available Tools
 
 1. **search_information**: Search for factual information
 2. **calculate**: Perform mathematical calculations
 3. **get_current_time**: Get current date and time
 4. **word_count**: Analyze text statistics
+
+You can easily add more tools by creating new functions and registering them with the agent. The agent will automatically decide when to use which tool based on what you're asking.
 
 ## Installation
 
@@ -38,8 +42,9 @@ print(result["answer"])
 
 ## Features
 
-- Automatic tool selection
-- Tool result integration
-- Error handling
-- Async support
+- Automatic tool selection (the agent picks the right tool)
+- Tool result integration (seamlessly combines tool outputs with reasoning)
+- Error handling (gracefully handles tool failures)
+- Async support (for better performance)
 
+The agent is smart about when to use tools. Ask it a math question and it'll use the calculator. Ask about facts and it'll search. It figures this out on its own.

@@ -12,13 +12,17 @@ Evaluation enables:
 - Performance monitoring
 - Response comparison
 
+How do you know if your agent is doing a good job? This pattern uses another LLM to evaluate responses across multiple criteria, giving you objective quality scores.
+
 ## Evaluation Criteria
 
-- Correctness
-- Relevance
-- Completeness
-- Clarity
-- Helpfulness
+- Correctness (is the answer right?)
+- Relevance (does it address the question?)
+- Completeness (does it cover everything?)
+- Clarity (is it easy to understand?)
+- Helpfulness (is it actually useful?)
+
+The evaluator scores responses on all these dimensions, so you can see where your agent excels and where it needs improvement.
 
 ## Installation
 
@@ -36,3 +40,6 @@ result = evaluator.evaluate("Question", "Agent response")
 print(result["scores"])
 ```
 
+Give it a question and the agent's response, and it'll score the response across all criteria. Use this to monitor performance over time or compare different approaches.
+
+This is really useful for improving your agents. You can test different prompts or configurations and see which ones score higher.

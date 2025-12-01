@@ -17,6 +17,8 @@ This pattern is useful for:
 - Problem-solving
 - Quality improvement
 
+It's like having an agent that can review its own work and make it better. The agent acts as both creator and critic, which leads to higher quality outputs.
+
 ## Architecture
 
 ```
@@ -47,7 +49,8 @@ print(result["refined_content"])
 
 ## Features
 
-- Single-pass reflection
-- Iterative refinement (multiple cycles)
-- Intermediate step visibility
+- Single-pass reflection (generate, critique, refine once)
+- Iterative refinement (multiple cycles for even better results)
+- Intermediate step visibility (see what changed at each step)
 
+You can choose between a single reflection cycle for speed or multiple cycles for maximum quality. The iterative approach is slower but often produces noticeably better results.
