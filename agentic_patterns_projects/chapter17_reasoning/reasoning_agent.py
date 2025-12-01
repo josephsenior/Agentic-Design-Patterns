@@ -158,9 +158,9 @@ if __name__ == "__main__":
     
     for problem in problems:
         print(f"\n{'='*70}")
-        print(f"📋 Problem: {problem}")
+        print(f"Problem: {problem}")
         print("=" * 70)
         result = agent.solve(problem)
-        print(f"\n💭 Reasoning:\n{result['reasoning']}")
-        print(f"\n✅ Answer: {result['answer']}")
+        print(f"\nReasoning:\n{result['reasoning']}")
+        print(f"\nAnswer: {result['answer']}")
 

@@ -99,7 +99,7 @@ Answer the question based on the context above."""),
             | StrOutputParser()
         )
         
-        print(f"✅ Loaded {len(chunks)} document chunks into vector store")
+        print(f"Loaded {len(chunks)} document chunks into vector store")
     
     def _format_docs(self, docs: List[Document]) -> str:
         """Format documents for the prompt."""
@@ -156,7 +156,7 @@ Answer the question based on the context above."""),
         
         # Add to existing vector store
         self.vectorstore.add_documents(chunks)
-        print(f"✅ Added {len(chunks)} new document chunks")
+        print(f"Added {len(chunks)} new document chunks")
 
 
 if __name__ == "__main__":
@@ -195,7 +195,7 @@ if __name__ == "__main__":
     print("RAG SYSTEM - KNOWLEDGE RETRIEVAL PATTERN")
     print("=" * 70)
     
-    print("\n📚 Loading knowledge base...")
+    print("\nLoading knowledge base...")
     rag.load_documents(knowledge_base)
     
     questions = [
@@ -207,9 +207,9 @@ if __name__ == "__main__":
     
     for question in questions:
         print("\n" + "=" * 70)
-        print(f"❓ Question: {question}")
+        print(f"Question: {question}")
         print("=" * 70)
         result = rag.query(question)
-        print(f"\n💡 Answer: {result['answer']}")
-        print(f"\n📄 Retrieved {result['num_retrieved']} relevant documents")
+        print(f"\nAnswer: {result['answer']}")
+        print(f"\nRetrieved {result['num_retrieved']} relevant documents")
 

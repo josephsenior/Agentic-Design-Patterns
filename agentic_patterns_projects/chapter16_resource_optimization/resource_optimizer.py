@@ -156,7 +156,7 @@ if __name__ == "__main__":
         "What is Python?",  # Another duplicate
     ]
     
-    print("\n📊 Processing queries with caching...")
+    print("\nProcessing queries with caching...")
     for query in queries:
         result = optimizer.cached_query(query)
         print(f"   Query: {query}")

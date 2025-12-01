@@ -174,7 +174,7 @@ Execute this task and provide the result.""")
         previous_results = []
         
         for task in plan["tasks"]:
-            print(f"\n📋 Executing Step {task['step']}: {task['description']}")
+            print(f"\nExecuting Step {task['step']}: {task['description']}")
             
             # Build context
             plan_context = f"Goal: {plan['goal']}\n\nPlan:\n{plan['plan_text']}"
@@ -200,7 +200,7 @@ Execute this task and provide the result.""")
             results["execution_results"].append(execution_result)
             previous_results.append(execution_result)
             
-            print(f"✅ Step {task['step']} completed")
+            print(f"Step {task['step']} completed")
         
         results["completed"] = True
         return results
@@ -216,14 +216,14 @@ Execute this task and provide the result.""")
         Returns:
             Complete planning and execution results
         """
-        print(f"🎯 Goal: {goal}")
+        print(f"Goal: {goal}")
         print("\n" + "=" * 70)
         print("PLANNING PHASE")
         print("=" * 70)
         
         plan = self.create_plan(goal)
         
-        print(f"\n📝 Plan created with {plan['total_tasks']} tasks:")
+        print(f"\nPlan created with {plan['total_tasks']} tasks:")
         for task in plan["tasks"]:
             print(f"  {task['step']}. {task['description']}")
         

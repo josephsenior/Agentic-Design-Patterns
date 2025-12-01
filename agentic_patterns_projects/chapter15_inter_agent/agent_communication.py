@@ -122,7 +122,7 @@ class AgentCommunicationHub:
     def register_agent(self, agent: CommunicatingAgent):
         """Register an agent in the communication hub."""
         self.agents[agent.agent_id] = agent
-        print(f"✅ Registered agent: {agent.agent_id} ({agent.role})")
+        print(f"Registered agent: {agent.agent_id} ({agent.role})")
     
     def send_message(self, sender_id: str, receiver_id: str, content: str):
         """Send a message from one agent to another."""

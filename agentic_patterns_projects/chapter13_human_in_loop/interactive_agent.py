@@ -149,7 +149,7 @@ Provide a helpful response.""")
         """Reset the conversation history."""
         self.conversation_history = []
         self.escalation_count = 0
-        print("🔄 Conversation reset")
+        print("Conversation reset")
 
 
 if __name__ == "__main__":
@@ -167,10 +167,10 @@ if __name__ == "__main__":
     ]
     
     for msg in messages:
-        print(f"\n👤 User: {msg}")
+        print(f"\nUser: {msg}")
         result = agent.process_message(msg, auto_escalate=True)
-        print(f"🤖 Agent: {result['response']}")
+        print(f"Agent: {result['response']}")
         if result['escalated']:
-            print(f"⚠️  ESCALATED: {result['reason']}")
+            print(f"ESCALATED: {result['reason']}")
             break
 

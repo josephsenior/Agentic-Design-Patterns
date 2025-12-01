@@ -46,27 +46,27 @@ class SmartRouter:
         # Define specialized handlers
         def booking_handler(request: str) -> str:
             """Handles booking-related requests."""
-            print("\n--- 🎫 DELEGATING TO BOOKING HANDLER ---")
+            print("\n--- DELEGATING TO BOOKING HANDLER ---")
             # In a real application, this would integrate with booking APIs
-            return f"✅ Booking Handler: I'll help you with '{request}'. " \
+            return f"Booking Handler: I'll help you with '{request}'. " \
                    f"Processing your booking request..."
         
         def info_handler(request: str) -> str:
             """Handles information requests."""
-            print("\n--- 📚 DELEGATING TO INFO HANDLER ---")
-            return f"📖 Info Handler: I can help you with '{request}'. " \
+            print("\n--- DELEGATING TO INFO HANDLER ---")
+            return f"Info Handler: I can help you with '{request}'. " \
                    f"Let me retrieve that information for you..."
         
         def support_handler(request: str) -> str:
             """Handles customer support requests."""
-            print("\n--- 🎧 DELEGATING TO SUPPORT HANDLER ---")
-            return f"💬 Support Handler: I understand you need help with '{request}'. " \
+            print("\n--- DELEGATING TO SUPPORT HANDLER ---")
+            return f"Support Handler: I understand you need help with '{request}'. " \
                    f"Let me assist you with that issue..."
         
         def unclear_handler(request: str) -> str:
             """Handles unclear or ambiguous requests."""
-            print("\n--- ❓ HANDLING UNCLEAR REQUEST ---")
-            return f"🤔 I'm not sure how to handle '{request}'. " \
+            print("\n--- HANDLING UNCLEAR REQUEST ---")
+            return f"I'm not sure how to handle '{request}'. " \
                    f"Could you please clarify? Are you looking to:\n" \
                    f"- Book something (flights, hotels, restaurants)\n" \
                    f"- Get information about something\n" \
@@ -184,9 +184,9 @@ if __name__ == "__main__":
     print("=" * 70)
     
     for req in test_requests:
-        print(f"\n📥 Request: {req}")
+        print(f"\nRequest: {req}")
         print("-" * 70)
         result = router.route_with_decision(req)
-        print(f"🎯 Decision: {result['decision']}")
-        print(f"💬 Response: {result['response']}")
+        print(f"Decision: {result['decision']}")
+        print(f"Response: {result['response']}")
 

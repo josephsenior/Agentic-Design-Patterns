@@ -95,7 +95,7 @@ Provide a helpful fallback response.""")
             except Exception as e:
                 error_msg = f"Attempt {attempt + 1} failed: {str(e)}"
                 result["errors"].append(error_msg)
-                print(f"⚠️  {error_msg}")
+                print(f"Warning: {error_msg}")
         
         # Fallback handler
         try:
@@ -182,11 +182,11 @@ if __name__ == "__main__":
     ]
     
     for query in queries:
-        print(f"\n📥 Query: {query}")
+        print(f"\nQuery: {query}")
         result = agent.process_with_fallback(query)
-        print(f"✅ Success: {result['success']}")
-        print(f"🔧 Method: {result['method']}")
-        print(f"💬 Response: {result['response']}")
+        print(f"Success: {result['success']}")
+        print(f"Method: {result['method']}")
+        print(f"Response: {result['response']}")
         if result['errors']:
-            print(f"⚠️  Errors: {result['errors']}")
+            print(f"Errors: {result['errors']}")
 

@@ -206,7 +206,7 @@ if __name__ == "__main__":
     print("PARALLEL DOCUMENT PROCESSOR - PARALLELIZATION PATTERN")
     print("=" * 70)
     
-    print("\n📄 Processing document with parallel analysis...")
+    print("\nProcessing document with parallel analysis...")
     result = processor.process(sample_document)
     
     print("\n" + "=" * 70)

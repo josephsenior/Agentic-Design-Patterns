@@ -29,7 +29,7 @@ def search_information(query: str) -> str:
     Returns:
         Information about the query
     """
-    print(f"\n🔍 [TOOL] Searching for: '{query}'")
+    print(f"\n[TOOL] Searching for: '{query}'")
     
     # Simulated search results (in production, this would call a real search API)
     knowledge_base = {
@@ -45,7 +45,7 @@ def search_information(query: str) -> str:
     result = knowledge_base.get(query_lower, 
         f"Information about '{query}': This is a simulated search result. In a real implementation, this would query a search engine or knowledge base.")
     
-    print(f"✅ [TOOL] Result: {result[:100]}...")
+    print(f"[TOOL] Result: {result[:100]}...")
     return result
 
 
@@ -61,7 +61,7 @@ def calculate(expression: str) -> str:
     Returns:
         The calculated result
     """
-    print(f"\n🧮 [TOOL] Calculating: '{expression}'")
+    print(f"\n[TOOL] Calculating: '{expression}'")
     
     try:
         # Safe evaluation of mathematical expressions
@@ -70,11 +70,11 @@ def calculate(expression: str) -> str:
             return "Error: Invalid characters in expression. Only basic math operations are allowed."
         
         result = eval(expression)
-        print(f"✅ [TOOL] Result: {result}")
+        print(f"[TOOL] Result: {result}")
         return str(result)
     except Exception as e:
         error_msg = f"Error calculating '{expression}': {str(e)}"
-        print(f"❌ [TOOL] {error_msg}")
+        print(f"[TOOL] Error: {error_msg}")
         return error_msg
 
 
@@ -88,10 +88,10 @@ def get_current_time() -> str:
         Current date and time information
     """
     from datetime import datetime
-    print(f"\n🕐 [TOOL] Getting current time...")
+    print(f"\n[TOOL] Getting current time...")
     now = datetime.now()
     result = f"Current date and time: {now.strftime('%Y-%m-%d %H:%M:%S')} ({now.strftime('%A')})"
-    print(f"✅ [TOOL] {result}")
+    print(f"[TOOL] {result}")
     return result
 
 
@@ -107,14 +107,14 @@ def word_count(text: str) -> str:
     Returns:
         Text statistics
     """
-    print(f"\n📊 [TOOL] Analyzing text...")
+    print(f"\n[TOOL] Analyzing text...")
     words = len(text.split())
     chars = len(text)
     chars_no_spaces = len(text.replace(' ', ''))
     sentences = text.count('.') + text.count('!') + text.count('?')
     
     result = f"Text Statistics:\n- Words: {words}\n- Characters: {chars}\n- Characters (no spaces): {chars_no_spaces}\n- Sentences: {sentences}"
-    print(f"✅ [TOOL] {result}")
+    print(f"[TOOL] {result}")
     return result
 
 
@@ -255,11 +255,11 @@ if __name__ == "__main__":
     
     for question in questions:
         print(f"\n{'='*70}")
-        print(f"❓ Question: {question}")
+        print(f"Question: {question}")
         print("=" * 70)
         result = assistant.ask(question)
         if result["success"]:
-            print(f"\n✅ Answer: {result['answer']}")
+            print(f"\nAnswer: {result['answer']}")
         else:
             print(f"\n❌ Error: {result.get('error', 'Unknown error')}")
 

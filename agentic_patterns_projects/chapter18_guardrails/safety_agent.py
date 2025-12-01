@@ -197,9 +197,9 @@ if __name__ == "__main__":
     ]
     
     for content in test_contents:
-        print(f"\n📝 Validating: {content[:50]}...")
+        print(f"\nValidating: {content[:50]}...")
         result = guardrail.validate(content)
-        print(f"✅ Safe: {result['safe']}")
+        print(f"Safe: {result['safe']}")
         if not result['safe']:
-            print(f"⚠️  Reason: {result['reason']}")
+            print(f"Reason: {result['reason']}")
 

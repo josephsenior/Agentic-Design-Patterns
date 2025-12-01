@@ -156,7 +156,7 @@ if __name__ == "__main__":
     ]
     
     for task, context in tasks:
-        print(f"\n📋 Adding task: {task}")
+        print(f"\nAdding task: {task}")
         result = manager.add_task(task, context)
         print(f"   Priority Score: {result['priority_score']}/10")
     
@@ -171,5 +171,5 @@ if __name__ == "__main__":
     
     next_task = manager.get_next_task()
     if next_task:
-        print(f"\n🎯 Next Task: {next_task['task']}")
+        print(f"\nNext Task: {next_task['task']}")
 

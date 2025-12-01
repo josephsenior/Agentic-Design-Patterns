@@ -175,12 +175,12 @@ if __name__ == "__main__":
     
     # Set a goal
     goal = "Create a marketing campaign for a new product"
-    print(f"\n🎯 Setting goal: {goal}")
+    print(f"\nSetting goal: {goal}")
     goal_data = agent.set_goal(goal)
-    print(f"\n📋 Sub-goals:\n{goal_data['sub_goals']}")
+    print(f"\nSub-goals:\n{goal_data['sub_goals']}")
     
     # Update progress
-    print(f"\n📈 Updating progress...")
+    print(f"\nUpdating progress...")
     progress = agent.update_progress(goal_data["id"], "Created campaign strategy document")
     print(f"Progress: {progress['goal']['progress']}%")
     print(f"Assessment: {progress['progress_assessment'][:200]}...")

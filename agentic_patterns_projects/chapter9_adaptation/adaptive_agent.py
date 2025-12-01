@@ -146,7 +146,7 @@ Use this knowledge to provide better responses."""),
         if feedback_text and rating >= 4:
             pattern = f"Successful pattern: {feedback_text}"
             self.learned_patterns.append(pattern)
-            print(f"📚 Learned new pattern: {pattern[:50]}...")
+            print(f"Learned new pattern: {pattern[:50]}...")
     
     def get_performance_stats(self) -> Dict[str, Any]:
         """Get performance statistics."""
@@ -172,9 +172,9 @@ if __name__ == "__main__":
     ]
     
     for query in queries:
-        print(f"\n❓ Query: {query}")
+        print(f"\nQuery: {query}")
         result = agent.process(query)
-        print(f"💬 Response: {result['response'][:100]}...")
+        print(f"Response: {result['response'][:100]}...")
         
         # Simulate feedback
         rating = 4.5

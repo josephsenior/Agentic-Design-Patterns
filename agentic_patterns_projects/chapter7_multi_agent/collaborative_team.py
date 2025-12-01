@@ -30,9 +30,9 @@ comprehensive information on topics. Provide detailed, well-sourced information.
     
     def research(self, topic: str) -> str:
         """Conduct research on a topic."""
-        print(f"🔍 [{self.role}] Researching: {topic}")
+        print(f"[{self.role}] Researching: {topic}")
         result = self.chain.invoke({"topic": topic})
-        print(f"✅ [{self.role}] Research complete")
+        print(f"[{self.role}] Research complete")
         return result
 
 
@@ -54,12 +54,12 @@ Create engaging, well-structured content.""")
     
     def write(self, requirements: str, research: str) -> str:
         """Write content based on requirements and research."""
-        print(f"✍️  [{self.role}] Writing content...")
+        print(f"[{self.role}] Writing content...")
         result = self.chain.invoke({
             "requirements": requirements,
             "research": research
         })
-        print(f"✅ [{self.role}] Writing complete")
+        print(f"[{self.role}] Writing complete")
         return result
 
 
@@ -80,9 +80,9 @@ Provide an improved version with better clarity, flow, and quality.""")
     
     def edit(self, content: str) -> str:
         """Edit and improve content."""
-        print(f"📝 [{self.role}] Editing content...")
+        print(f"[{self.role}] Editing content...")
         result = self.chain.invoke({"content": content})
-        print(f"✅ [{self.role}] Editing complete")
+        print(f"[{self.role}] Editing complete")
         return result
 
 
@@ -105,13 +105,13 @@ Create a final comprehensive deliverable.""")
     
     def coordinate(self, research: str, draft: str, edited: str) -> str:
         """Coordinate and synthesize team outputs."""
-        print(f"👔 [{self.role}] Coordinating team outputs...")
+        print(f"[{self.role}] Coordinating team outputs...")
         result = self.chain.invoke({
             "research": research,
             "draft": draft,
             "edited": edited
         })
-        print(f"✅ [{self.role}] Coordination complete")
+        print(f"[{self.role}] Coordination complete")
         return result
 
 
@@ -168,8 +168,8 @@ class CollaborativeTeam:
         print("=" * 70)
         print("COLLABORATIVE TEAM - MULTI-AGENT COLLABORATION")
         print("=" * 70)
-        print(f"\n📋 Task: {task}")
-        print(f"📝 Requirements: {requirements}")
+        print(f"\nTask: {task}")
+        print(f"Requirements: {requirements}")
         
         # Step 1: Research
         print("\n" + "-" * 70)

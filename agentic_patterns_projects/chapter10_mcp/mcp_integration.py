@@ -103,13 +103,13 @@ if __name__ == "__main__":
     client.connect_server(server)
     
     # List tools
-    print("\n📋 Available tools:")
+    print("\nAvailable tools:")
     tools = client.list_tools()
     for server_name, tool_list in tools.items():
         print(f"  {server_name}: {tool_list}")
     
     # Call tool
-    print("\n🔧 Calling tool...")
+    print("\nCalling tool...")
     result = client.call_tool("filesystem_server", "read_file", path="/example.txt")
     print(f"Result: {result}")
 

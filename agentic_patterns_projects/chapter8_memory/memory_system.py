@@ -265,11 +265,11 @@ if __name__ == "__main__":
     ]
     
     for msg in messages:
-        print(f"\n👤 User: {msg}")
+        print(f"\nUser: {msg}")
         result = memory_system.chat(msg)
-        print(f"🤖 Assistant: {result['assistant_response']}")
+        print(f"Assistant: {result['assistant_response']}")
     
-    print(f"\n📊 Conversation History ({len(memory_system.get_conversation_history())} messages)")
+    print(f"\nConversation History ({len(memory_system.get_conversation_history())} messages)")
     
     # Example 2: Contextual Agent
     print("\n" + "=" * 70)
@@ -279,9 +279,9 @@ if __name__ == "__main__":
     contextual_agent = ContextualAgent()
     
     for msg in messages:
-        print(f"\n👤 User: {msg}")
+        print(f"\nUser: {msg}")
         result = contextual_agent.chat(msg)
-        print(f"🤖 Assistant: {result['assistant_response']}")
+        print(f"Assistant: {result['assistant_response']}")
     
-    print(f"\n📊 Context: {contextual_agent.get_context()}")
+    print(f"\nContext: {contextual_agent.get_context()}")
 

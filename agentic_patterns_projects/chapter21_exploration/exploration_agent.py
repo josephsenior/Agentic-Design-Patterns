@@ -131,7 +131,7 @@ if __name__ == "__main__":
     
     problem = "How can we improve user engagement in a mobile app?"
     
-    print(f"\n🔍 Problem: {problem}")
+    print(f"\nProblem: {problem}")
     print("\n" + "=" * 70)
     print("EXPLORING MULTIPLE APPROACHES")
     print("=" * 70)

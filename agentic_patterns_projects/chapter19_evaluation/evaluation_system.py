@@ -159,10 +159,10 @@ if __name__ == "__main__":
     query = "What is artificial intelligence?"
     response = "Artificial Intelligence (AI) is a branch of computer science that aims to create intelligent machines capable of performing tasks that typically require human intelligence."
     
-    print(f"\n📋 Query: {query}")
-    print(f"💬 Response: {response}")
+    print(f"\nQuery: {query}")
+    print(f"Response: {response}")
     
     result = evaluator.evaluate(query, response)
-    print(f"\n📊 Evaluation:\n{result['evaluation']}")
-    print(f"\n⭐ Average Score: {result['average_score']:.2f}/10")
+    print(f"\nEvaluation:\n{result['evaluation']}")
+    print(f"\nAverage Score: {result['average_score']:.2f}/10")
 

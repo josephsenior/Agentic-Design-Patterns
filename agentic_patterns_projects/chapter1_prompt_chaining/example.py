@@ -27,9 +27,9 @@ def example_basic_analysis():
     analyzer = DocumentAnalyzer()
     result = analyzer.analyze(document)
     
-    print("\n📄 Input Document:")
+    print("\nInput Document:")
     print(document.strip())
-    print("\n📊 Analysis Results:")
+    print("\nAnalysis Results:")
     print(json.dumps(result, indent=2))
 
 
@@ -55,9 +55,9 @@ def example_research_paper():
     analyzer = DocumentAnalyzer()
     result = analyzer.analyze(document)
     
-    print("\n📄 Input Document:")
+    print("\nInput Document:")
     print(document.strip())
-    print("\n📊 Analysis Results:")
+    print("\nAnalysis Results:")
     print(json.dumps(result, indent=2))
 
 
@@ -136,7 +136,7 @@ def example_batch_processing():
     analyzer = DocumentAnalyzer()
     
     for i, doc in enumerate(documents, 1):
-        print(f"\n📄 Document {i}:")
+        print(f"\nDocument {i}:")
         print("-" * 70)
         result = analyzer.analyze(doc)
         print(f"Summary: {result.get('summary', 'N/A')}")
@@ -145,9 +145,9 @@ def example_batch_processing():
 
 
 if __name__ == "__main__":
-    print("\n" + "🚀 " * 20)
+    print("\n" + "=" * 70)
     print("DOCUMENT ANALYSIS PIPELINE - PROMPT CHAINING DEMO")
-    print("🚀 " * 20)
+    print("=" * 70)
     
     try:
         # Run examples
@@ -157,11 +157,11 @@ if __name__ == "__main__":
         example_batch_processing()
         
         print("\n" + "=" * 70)
-        print("✅ All examples completed successfully!")
+        print("All examples completed successfully!")
         print("=" * 70)
         
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\nError: {e}")
         print("\nMake sure you have:")
         print("1. Installed all dependencies: pip install -r requirements.txt")
         print("2. Set your OPENAI_API_KEY in .env file")

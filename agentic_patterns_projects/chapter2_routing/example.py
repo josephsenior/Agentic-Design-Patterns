@@ -21,10 +21,10 @@ def example_basic_routing():
     ]
     
     for req in requests:
-        print(f"\n📥 Request: {req}")
+        print(f"\nRequest: {req}")
         result = router.route_with_decision(req)
-        print(f"   🎯 Routed to: {result['decision']}")
-        print(f"   💬 Response: {result['response']}")
+        print(f"   Routed to: {result['decision']}")
+        print(f"   Response: {result['response']}")
 
 
 def example_customer_support_scenario():
@@ -44,7 +44,7 @@ def example_customer_support_scenario():
         "What's the return policy?"
     ]
     
-    print("\n📞 Customer Support Center - Request Routing\n")
+    print("\nCustomer Support Center - Request Routing\n")
     for i, req in enumerate(customer_requests, 1):
         print(f"\n[{i}] Customer: {req}")
         result = router.route_with_decision(req)

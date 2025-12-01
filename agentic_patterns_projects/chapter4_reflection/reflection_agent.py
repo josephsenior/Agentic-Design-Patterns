@@ -209,7 +209,7 @@ if __name__ == "__main__":
     print("REFLECTION AGENT - SELF-IMPROVING CONTENT GENERATOR")
     print("=" * 70)
     
-    print("\n📝 Requirements:", requirements)
+    print("\nRequirements:", requirements)
     print("\n" + "=" * 70)
     print("GENERATING WITH REFLECTION...")
     print("=" * 70)
