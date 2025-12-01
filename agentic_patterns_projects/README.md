@@ -6,111 +6,111 @@ This directory contains complete, production-ready implementations of all 21 des
 
 ### Core Patterns (Chapters 1-8)
 
-1. **Chapter 1: Prompt Chaining** - `chapter1_prompt_chaining/`
+1. **Chapter 1: Prompt Chaining** - `prompt_chaining/`
    - **Project**: Document Analysis Pipeline
    - **Pattern**: Sequential multi-step processing
    - **Use Case**: Extract → Entities → Summary → JSON
 
-2. **Chapter 2: Routing** - `chapter2_routing/`
+2. **Chapter 2: Routing** - `routing/`
    - **Project**: Smart Request Router
    - **Pattern**: Request classification and delegation
    - **Use Case**: Route requests to specialized handlers
 
-3. **Chapter 3: Parallelization** - `chapter3_parallelization/`
+3. **Chapter 3: Parallelization** - `parallelization/`
    - **Project**: Parallel Document Processor
    - **Pattern**: Concurrent task execution
    - **Use Case**: 5 parallel analysis tasks with synthesis
 
-4. **Chapter 4: Reflection** - `chapter4_reflection/`
+4. **Chapter 4: Reflection** - `reflection/`
    - **Project**: Self-Improving Content Generator
    - **Pattern**: Generate → Critique → Refine
    - **Use Case**: Iterative content improvement
 
-5. **Chapter 5: Tool Use** - `chapter5_tool_use/`
+5. **Chapter 5: Tool Use** - `tool_use/`
    - **Project**: Research Assistant with Tools
    - **Pattern**: Function calling and tool integration
    - **Use Case**: Search, calculate, analyze with tools
 
-6. **Chapter 6: Planning** - `chapter6_planning/`
+6. **Chapter 6: Planning** - `planning/`
    - **Project**: Task Planning System
    - **Pattern**: Goal decomposition and execution
    - **Use Case**: Break goals into actionable tasks
 
-7. **Chapter 7: Multi-Agent** - `chapter7_multi_agent/`
+7. **Chapter 7: Multi-Agent** - `multi_agent/`
    - **Project**: Collaborative Team System
    - **Pattern**: Multiple specialized agents working together
    - **Use Case**: Research → Write → Edit → Coordinate
 
-8. **Chapter 8: Memory** - `chapter8_memory/`
+8. **Chapter 8: Memory** - `memory/`
    - **Project**: Conversation Memory System
    - **Pattern**: State persistence and context management
    - **Use Case**: Maintain conversation history
 
 ### Advanced Patterns (Chapters 9-14)
 
-9. **Chapter 9: Adaptation** - `chapter9_adaptation/`
+9. **Chapter 9: Adaptation** - `adaptation/`
    - **Project**: Adaptive Agent
    - **Pattern**: Learning from feedback
    - **Use Case**: Improve over time based on experience
 
-10. **Chapter 10: MCP** - `chapter10_mcp/`
+10. **Chapter 10: MCP** - `mcp/`
     - **Project**: Model Context Protocol Integration
     - **Pattern**: Standardized agent communication
     - **Use Case**: Tool sharing and resource access
 
-11. **Chapter 11: Goal Setting** - `chapter11_goal_setting/`
+11. **Chapter 11: Goal Setting** - `goal_setting/`
     - **Project**: Goal-Oriented Agent
     - **Pattern**: Goal breakdown and progress tracking
     - **Use Case**: Set goals, track progress, achieve objectives
 
-12. **Chapter 12: Exception Handling** - `chapter12_exception_handling/`
+12. **Chapter 12: Exception Handling** - `exception_handling/`
     - **Project**: Robust Agent with Fallback
     - **Pattern**: Error handling and recovery
     - **Use Case**: Graceful failure handling
 
-13. **Chapter 13: Human-in-the-Loop** - `chapter13_human_in_loop/`
+13. **Chapter 13: Human-in-the-Loop** - `human_in_loop/`
     - **Project**: Interactive Agent
     - **Pattern**: Human escalation and feedback
     - **Use Case**: Customer support with escalation
 
-14. **Chapter 14: RAG** - `chapter14_rag/`
+14. **Chapter 14: RAG** - `rag/`
     - **Project**: Knowledge Retrieval System
     - **Pattern**: Retrieval-Augmented Generation
     - **Use Case**: Document-based Q&A
 
 ### Specialized Patterns (Chapters 15-21)
 
-15. **Chapter 15: Inter-Agent Communication** - `chapter15_inter_agent/`
+15. **Chapter 15: Inter-Agent Communication** - `inter_agent/`
     - **Project**: Agent Communication System
     - **Pattern**: Agent-to-agent messaging
     - **Use Case**: Agents collaborating via messages
 
-16. **Chapter 16: Resource Optimization** - `chapter16_resource_optimization/`
+16. **Chapter 16: Resource Optimization** - `resource_optimization/`
     - **Project**: Resource Optimizer
     - **Pattern**: Efficient resource usage
     - **Use Case**: Caching, batching, cost optimization
 
-17. **Chapter 17: Reasoning** - `chapter17_reasoning/`
+17. **Chapter 17: Reasoning** - `reasoning/`
     - **Project**: Chain-of-Thought Agent
     - **Pattern**: Step-by-step reasoning
     - **Use Case**: Complex problem solving
 
-18. **Chapter 18: Guardrails** - `chapter18_guardrails/`
+18. **Chapter 18: Guardrails** - `guardrails/`
     - **Project**: Safety Agent
     - **Pattern**: Content validation and filtering
     - **Use Case**: Safety and compliance checking
 
-19. **Chapter 19: Evaluation** - `chapter19_evaluation/`
+19. **Chapter 19: Evaluation** - `evaluation/`
     - **Project**: Agent Evaluation System
     - **Pattern**: LLM-as-a-Judge
     - **Use Case**: Quality assessment and monitoring
 
-20. **Chapter 20: Prioritization** - `chapter20_prioritization/`
+20. **Chapter 20: Prioritization** - `prioritization/`
     - **Project**: Task Prioritization System
     - **Pattern**: Priority-based task management
     - **Use Case**: Rank and order tasks
 
-21. **Chapter 21: Exploration** - `chapter21_exploration/`
+21. **Chapter 21: Exploration** - `exploration/`
     - **Project**: Exploration Agent
     - **Pattern**: Experimental discovery
     - **Use Case**: Multiple approach testing
@@ -121,7 +121,7 @@ Getting started with any project is straightforward:
 
 ```bash
 # 1. Navigate to the project you want to explore
-cd agentic_patterns_projects/chapterX_pattern/
+cd agentic_patterns_projects/prompt_chaining/
 
 # 2. Install the dependencies
 pip install -r requirements.txt
@@ -139,8 +139,9 @@ python main_file.py
 Each project follows a consistent structure that makes it easy to understand and extend:
 
 ```
-chapterX_pattern/
-├── main_file.py          # Core implementation
+prompt_chaining/
+├── document_analyzer.py  # Core implementation
+├── example.py            # Usage examples
 ├── README.md             # Project documentation
 ├── requirements.txt      # Python dependencies
 └── .env.example         # Environment template
