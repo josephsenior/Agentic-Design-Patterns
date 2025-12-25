@@ -45,7 +45,7 @@ This project follows a code of conduct to ensure a welcoming environment for all
    ```
 5. **Set up environment variables**:
    ```bash
-   cp .env.example .env
+   cp .env.example .env  # from the repository root
    # Edit .env and add your GEMINI_API_KEY
    ```
 

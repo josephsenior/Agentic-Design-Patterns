@@ -8,7 +8,7 @@ and state across multiple interactions.
 import os
 from typing import Dict, Any, Optional, List
 from dotenv import load_dotenv
-from langchain_Gemini import ChatGemini
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from langchain_core.output_parsers import StrOutputParser
@@ -25,7 +25,7 @@ class ConversationMemory:
     
     def __init__(
         self,
-        model_name: str = "gpt-3.5-turbo",
+        model_name: str = "gemini-2.5-flash",
         temperature: float = 0.7,
         memory_type: str = "buffer",  # "buffer" or "summary"
         api_key: Optional[str] = None
@@ -43,10 +43,10 @@ class ConversationMemory:
         if not api_key:
             raise ValueError("Gemini API key is required. Set GEMINI_API_KEY environment variable.")
         
-        self.llm = ChatGemini(
+        self.llm = ChatGoogleGenerativeAI(
             model=model_name,
             temperature=temperature,
-            api_key=api_key
+            google_api_key=api_key
         )
         
         self.memory_type = memory_type
@@ -149,7 +149,7 @@ class ContextualAgent:
     
     def __init__(
         self,
-        model_name: str = "gpt-3.5-turbo",
+        model_name: str = "gemini-2.5-flash",
         temperature: float = 0.7,
         api_key: Optional[str] = None
     ):
@@ -158,10 +158,10 @@ class ContextualAgent:
         if not api_key:
             raise ValueError("Gemini API key is required.")
         
-        self.llm = ChatGemini(
+        self.llm = ChatGoogleGenerativeAI(
             model=model_name,
             temperature=temperature,
-            api_key=api_key
+            google_api_key=api_key
         )
         
         # Manual context management

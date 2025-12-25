@@ -1,5 +1,5 @@
 langchain>=0.1.0
-langchain-Gemini>=0.0.5
+langchain-google-genai>=2.0.0
 langchain-community>=0.0.20
 faiss-cpu>=1.7.4
 python-dotenv>=1.0.0

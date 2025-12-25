@@ -8,7 +8,7 @@ critiques it, and then refines it based on the critique.
 import os
 from typing import Dict, Any, Optional
 from dotenv import load_dotenv
-from langchain_Gemini import ChatGemini
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
@@ -23,7 +23,7 @@ class ReflectionAgent:
     
     def __init__(
         self,
-        model_name: str = "gpt-3.5-turbo",
+        model_name: str = "gemini-2.5-flash",
         temperature: float = 0.7,
         api_key: Optional[str] = None
     ):
@@ -32,10 +32,10 @@ class ReflectionAgent:
         if not api_key:
             raise ValueError("Gemini API key is required. Set GEMINI_API_KEY environment variable.")
         
-        self.llm = ChatGemini(
+        self.llm = ChatGoogleGenerativeAI(
             model=model_name,
             temperature=temperature,
-            api_key=api_key
+            google_api_key=api_key
         )
         
         self._build_reflection_chain()

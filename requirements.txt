@@ -1,0 +1,9 @@
+# Shared runtime dependencies for the examples.
+langchain>=0.3,<2.0
+langchain-community>=0.3,<2.0
+langchain-google-genai>=2.0,<4.0
+python-dotenv>=1.0,<2.0
+pydantic>=2.0,<3.0
+
+# Development and verification.
+pytest>=8.0,<9.0

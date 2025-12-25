@@ -8,7 +8,7 @@ and share information with each other.
 import os
 from typing import Dict, Any, Optional, List
 from dotenv import load_dotenv
-from langchain_Gemini import ChatGemini
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
@@ -44,7 +44,7 @@ class CommunicatingAgent:
         self,
         agent_id: str,
         role: str,
-        llm: ChatGemini
+        llm: ChatGoogleGenerativeAI
     ):
         """Initialize a communicating agent."""
         self.agent_id = agent_id
@@ -158,9 +158,9 @@ class AgentCommunicationHub:
 
 
 if __name__ == "__main__":
-    from langchain_Gemini import ChatGemini
+    from langchain_google_genai import ChatGoogleGenerativeAI
     
-    llm = ChatGemini()
+    llm = ChatGoogleGenerativeAI()
     
     print("=" * 70)
     print("INTER-AGENT COMMUNICATION - AGENT COMMUNICATION PATTERN")
