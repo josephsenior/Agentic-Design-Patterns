@@ -1,246 +1,149 @@
-# 🚀 Agentic Design Patterns - Complete Real-World Projects
+# Agentic Design Patterns
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Stars](https://img.shields.io/github/stars/josephsenior/Agentic-design-patterns-)](https://github.com/josephsenior/Agentic-design-patterns-/stargazers)
-[![Issues](https://img.shields.io/github/issues/josephsenior/Agentic-design-patterns-)](https://github.com/josephsenior/Agentic-design-patterns-/issues)
+> 21 runnable reference implementations for understanding common LLM-agent workflow patterns.
 
-This repository contains complete, production-ready implementations of all 21 design patterns from the Agentic Design Patterns book. Each project demonstrates a specific pattern with a practical, runnable application.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Stars](https://img.shields.io/github/stars/josephsenior/Agentic-Design-Patterns)](https://github.com/josephsenior/Agentic-Design-Patterns/stargazers)
+[![Issues](https://img.shields.io/github/issues/josephsenior/Agentic-Design-Patterns)](https://github.com/josephsenior/Agentic-Design-Patterns/issues)
 
-> **Note**: This is an educational resource for learning AI agent design patterns. All code is MIT licensed and ready for experimentation.
+This repository is a clean-room educational reference library containing runnable implementations of 21 agent design primitives. Each directory isolates one pattern and pairs the implementation with a small practical example.
 
-## 📋 Table of Contents
+The goal is not to present one universal agent framework. It is to make individual orchestration ideas easy to inspect, run, compare, and combine.
 
-- [🚀 All 21 Patterns Implemented](#-all-21-patterns-implemented)
-  - [Core Patterns (Chapters 1-8)](#core-patterns-chapters-1-8)
-  - [Advanced Patterns (Chapters 9-14)](#advanced-patterns-chapters-9-14)
-  - [Specialized Patterns (Chapters 15-21)](#specialized-patterns-chapters-15-21)
-- [🛠️ Quick Start](#️-quick-start)
-- [🏗️ Project Structure](#️-project-structure)
-- [📊 Pattern Categories](#-pattern-categories)
-- [📦 Requirements](#-requirements)
-- [💻 Usage Examples](#-usage-examples)
-- [📚 Learning Path](#-learning-path)
-- [🔧 Integration](#-integration)
-- [📈 Status](#-status)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
+## Patterns
 
-## 🚀 All 21 Patterns Implemented
+| # | Pattern | Reference use case |
+|---|---|---|
+| 1 | Prompt Chaining | Sequential document processing |
+| 2 | Routing | Request classification and delegation |
+| 3 | Parallelization | Concurrent analysis and synthesis |
+| 4 | Reflection | Generate, critique, refine |
+| 5 | Tool Use | Function calling and external tools |
+| 6 | Planning | Goal decomposition and task execution |
+| 7 | Multi-Agent | Specialized agent collaboration |
+| 8 | Memory | Conversation state and persistence |
+| 9 | Adaptation | Feedback-driven behavior changes |
+| 10 | MCP | Standardized tool/resource integration |
+| 11 | Goal Setting | Goal breakdown and progress tracking |
+| 12 | Exception Handling | Fallback and recovery workflows |
+| 13 | Human-in-the-Loop | Escalation and human feedback |
+| 14 | RAG | Retrieval-augmented generation |
+| 15 | Inter-Agent Communication | Agent-to-agent messaging |
+| 16 | Resource Optimization | Caching, batching, and cost control |
+| 17 | Reasoning | Structured problem-solving workflows |
+| 18 | Guardrails | Validation and policy checks |
+| 19 | Evaluation | LLM-as-a-Judge and quality assessment |
+| 20 | Prioritization | Priority-based task ordering |
+| 21 | Exploration | Testing multiple candidate approaches |
 
-### 🏗️ Core Patterns (Chapters 1-8)
+## Quick start
 
-| # | Pattern | Project | Description |
-|---|---------|---------|-------------|
-| 1 | **Prompt Chaining**<br>`prompt_chaining/` | Document Analysis Pipeline | Sequential multi-step processing<br>📝 Extract → Entities → Summary → JSON |
-| 2 | **Routing**<br>`routing/` | Smart Request Router | Request classification and delegation<br>🔀 Route to specialized handlers |
-| 3 | **Parallelization**<br>`parallelization/` | Parallel Document Processor | Concurrent task execution<br>⚡ 5 parallel analysis tasks with synthesis |
-| 4 | **Reflection**<br>`reflection/` | Self-Improving Content Generator | Generate → Critique → Refine<br>🔄 Iterative content improvement |
-| 5 | **Tool Use**<br>`tool_use/` | Research Assistant with Tools | Function calling and tool integration<br>🛠️ Search, calculate, analyze with tools |
-| 6 | **Planning**<br>`planning/` | Task Planning System | Goal decomposition and execution<br>📋 Break goals into actionable tasks |
-| 7 | **Multi-Agent**<br>`multi_agent/` | Collaborative Team System | Multiple specialized agents working together<br>👥 Research → Write → Edit → Coordinate |
-| 8 | **Memory**<br>`memory/` | Conversation Memory System | State persistence and context management<br>🧠 Maintain conversation history |
-
-### ⚡ Advanced Patterns (Chapters 9-14)
-
-| # | Pattern | Project | Description |
-|---|---------|---------|-------------|
-| 9 | **Adaptation**<br>`adaptation/` | Adaptive Agent | Learning from feedback<br>📈 Improve over time based on experience |
-| 10 | **MCP**<br>`mcp/` | Model Context Protocol Integration | Standardized agent communication<br>🔗 Tool sharing and resource access |
-| 11 | **Goal Setting**<br>`goal_setting/` | Goal-Oriented Agent | Goal breakdown and progress tracking<br>🎯 Set goals, track progress, achieve objectives |
-| 12 | **Exception Handling**<br>`exception_handling/` | Robust Agent with Fallback | Error handling and recovery<br>🛡️ Graceful failure handling |
-| 13 | **Human-in-the-Loop**<br>`human_in_loop/` | Interactive Agent | Human escalation and feedback<br>👤 Customer support with escalation |
-| 14 | **RAG**<br>`rag/` | Knowledge Retrieval System | Retrieval-Augmented Generation<br>📚 Document-based Q&A |
-
-### 🎯 Specialized Patterns (Chapters 15-21)
-
-| # | Pattern | Project | Description |
-|---|---------|---------|-------------|
-| 15 | **Inter-Agent Communication**<br>`inter_agent/` | Agent Communication System | Agent-to-agent messaging<br>💬 Agents collaborating via messages |
-| 16 | **Resource Optimization**<br>`resource_optimization/` | Resource Optimizer | Efficient resource usage<br>⚡ Caching, batching, cost optimization |
-| 17 | **Reasoning**<br>`reasoning/` | Chain-of-Thought Agent | Step-by-step reasoning<br>🧠 Complex problem solving |
-| 18 | **Guardrails**<br>`guardrails/` | Safety Agent | Content validation and filtering<br>🔒 Safety and compliance checking |
-| 19 | **Evaluation**<br>`evaluation/` | Agent Evaluation System | LLM-as-a-Judge<br>📊 Quality assessment and monitoring |
-| 20 | **Prioritization**<br>`prioritization/` | Task Prioritization System | Priority-based task management<br>📋 Rank and order tasks |
-| 21 | **Exploration**<br>`exploration/` | Exploration Agent | Experimental discovery<br>🔍 Multiple approach testing |
-
-## 🛠️ Quick Start
-
-Getting started with any project is straightforward:
+Clone the repository:
 
 ```bash
-# 1. Navigate to the project you want to explore
-cd agentic_patterns_projects/prompt_chaining/
+git clone https://github.com/josephsenior/Agentic-Design-Patterns.git
+cd Agentic-Design-Patterns
+```
 
-# 2. Install the dependencies
+Move into a pattern directory, install its dependencies, and run the example:
+
+```bash
+cd prompt_chaining
 pip install -r requirements.txt
-
-# 3. Set up your environment variables
 cp .env.example .env
-# Edit .env and add your GEMINI_API_KEY
-
-# 4. Run the example
-python example.py  # Note: Use example.py, not main_file.py
+python example.py
 ```
 
-## 🏗️ Project Structure
+Some examples use Gemini. Add the required API key to the pattern's `.env` file when needed.
 
-Each project follows a consistent structure that makes it easy to understand and extend:
+## Repository philosophy
 
-```
-📁 prompt_chaining/
-├── 🔧 document_analyzer.py  # Core implementation
-├── 📝 example.py            # Usage examples
-├── 📖 README.md             # Project documentation
-├── 📦 requirements.txt      # Python dependencies
-└── ⚙️ .env.example          # Environment template
-```
+Each implementation is intentionally small and pattern-focused:
 
-## 📊 Pattern Categories
-
-I've organized the patterns into categories to help you understand how they relate:
-
-| Category | Patterns | Description |
-|----------|----------|-------------|
-| **🔄 Sequential Patterns** | Prompt Chaining, Planning | Linear workflows and goal decomposition |
-| **⚡ Parallel Patterns** | Parallelization | Concurrent task execution |
-| **🎯 Decision Patterns** | Routing, Reflection, Prioritization | Request routing and iterative improvement |
-| **🔗 Integration Patterns** | Tool Use, Multi-Agent, Inter-Agent Communication, MCP | Agent coordination and tool integration |
-| **🧠 State Patterns** | Memory Management, Goal Setting | State persistence and goal tracking |
-| **🛡️ Quality Patterns** | Exception Handling, Guardrails, Evaluation | Error handling and quality assurance |
-| **🚀 Advanced Patterns** | Adaptation, RAG, Reasoning, Human-in-the-Loop, Resource Optimization, Exploration | Cutting-edge agent capabilities |
-
-## 📦 Requirements
-
-Most projects share similar requirements:
-
-- 🐍 **Python 3.8 or higher**
-- 🔑 **Gemini API key** (set in your `.env` file)
-- 📚 **LangChain libraries** (installed via requirements.txt)
-
-## 💻 Installation
-
-To get started, install the common dependencies:
-
-```bash
-# Install common dependencies
-pip install langchain langchain-google-genai langchain-community python-dotenv
-
-# For specific projects, check their requirements.txt for any additional packages
+```text
+pattern_name/
+├── implementation.py
+├── example.py
+├── README.md
+├── requirements.txt
+└── .env.example
 ```
 
-> **Note**: Make sure you have a valid Gemini API key. You can get one from [Google AI Studio](https://makersuite.google.com/app/apikey).
+Exact filenames can vary by pattern, but the examples are organized so the orchestration primitive remains easy to identify.
 
-## 💻 Usage Examples
+## How the patterns relate
 
-Here are some quick examples to get you started:
+### Sequential and planning
 
-### 📝 Example 1: Prompt Chaining
-```python
-from document_analyzer import DocumentAnalyzer
+- Prompt Chaining
+- Planning
+- Goal Setting
+- Prioritization
 
-analyzer = DocumentAnalyzer()
-result = analyzer.analyze("Your document text...")
-print(result)  # Returns structured JSON with extracted entities and summary
-```
+These patterns organize work over time and make task progression explicit.
 
-### 🔀 Example 2: Routing
-```python
-from smart_router import SmartRouter
+### Decision and feedback
 
-router = SmartRouter()
-result = router.route("Book me a flight to Paris next week")
-print(result)  # Routes to travel booking handler
-```
+- Routing
+- Reflection
+- Adaptation
+- Exploration
 
-### 👥 Example 3: Multi-Agent Collaboration
-```python
-from collaborative_team import CollaborativeTeam
+These patterns select, critique, revise, or compare candidate paths.
 
-team = CollaborativeTeam()
-result = team.collaborate("Create a blog post", "Requirements...")
-print(result)  # Coordinated output from research, writing, and editing agents
-```
+### Tools and coordination
 
-## 📚 Learning Path
+- Tool Use
+- Multi-Agent
+- Inter-Agent Communication
+- MCP
 
-If you're new to agentic design patterns, here's a suggested learning path:
+These patterns connect agents to capabilities or to other specialized agents.
 
-### 🏗️ Phase 1: Core Patterns (Chapters 1-8)
-**Focus**: Fundamentals of agent workflows
-- Learn sequential and parallel processing
-- Understand basic agent coordination
-- Build foundation for advanced patterns
+### State and knowledge
 
-### ⚡ Phase 2: Advanced Patterns (Chapters 9-14)
-**Focus**: Production-ready capabilities
-- Master adaptation and memory systems
-- Implement RAG and human interaction
-- Build on core concepts with real-world features
+- Memory
+- RAG
 
-### 🎯 Phase 3: Specialized Patterns (Chapters 15-21)
-**Focus**: Enterprise-grade agent systems
-- Resource optimization and cost management
-- Safety, evaluation, and quality assurance
-- Advanced techniques for production deployment
+These patterns provide persistent conversational state or external knowledge retrieval.
 
-## 🔧 Integration
+### Reliability and control
 
-One of the coolest things about these patterns is that you can combine them:
+- Exception Handling
+- Human-in-the-Loop
+- Guardrails
+- Evaluation
+- Resource Optimization
 
-| Pattern Combination | Use Case |
-|-------------------|----------|
-| **Routing + Multi-Agent** | Complex workflow orchestration |
-| **RAG + Tool Use** | Enhanced knowledge retrieval with external tools |
-| **Guardrails + Any Agent** | Safety and compliance across all systems |
-| **Evaluation + Planning** | Quality monitoring of goal execution |
-| **Memory + Adaptation** | Learning systems with persistent state |
+These patterns help make agent workflows more observable, bounded, and testable.
 
-Feel free to experiment and mix patterns to solve your specific problems!
+## Example combinations
 
-## 📈 Status
+| Combination | Use case |
+|---|---|
+| Routing + Tool Use | Select the right capability for each request |
+| Planning + Evaluation | Validate progress before advancing |
+| RAG + Tool Use | Combine retrieved context with external actions |
+| Memory + Adaptation | Use historical feedback to adjust behavior |
+| Multi-Agent + Inter-Agent Communication | Coordinate specialized roles |
+| Guardrails + Exception Handling | Bound actions and recover from failures |
 
-✅ **All 21 patterns are complete and ready to use**
+## Who this is for
 
-Every pattern has been implemented as a production-ready project with:
-- Comprehensive documentation and examples
-- Proper error handling and type hints
-- Architecture diagrams and explanations
-- Ready-to-run code with minimal setup
+- Engineers learning agent orchestration beyond single-prompt applications
+- Students comparing common LLM-agent patterns
+- Builders looking for small references before integrating a pattern into a larger system
 
-## 🤝 Contributing
+For a larger autonomous-agent runtime that combines planning, tools, execution, durability, and validation, see [Grinta](https://github.com/josephsenior/Grinta-Coding-Agent).
 
-We welcome contributions! Each project is self-contained and can be extended independently.
+## Contributing
 
-### Ways to Contribute
-- 📝 Add more examples and use cases
-- 🔧 Integrate with your own systems
-- 🔗 Combine patterns in new ways
-- 🚀 Extend functionality and add new features
-- 🐛 Report bugs and suggest improvements
-- 📖 Improve documentation
+Issues and pull requests are welcome.
 
-### Getting Started
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes and test thoroughly
-4. Submit a pull request with a clear description
+- [Open an issue](https://github.com/josephsenior/Agentic-Design-Patterns/issues)
+- [View the repository](https://github.com/josephsenior/Agentic-Design-Patterns)
 
-These are educational examples, so feel free to experiment and build on them!
+## License
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-These projects are educational examples demonstrating agentic design patterns. Use them to learn, experiment, and build your own systems.
-
----
-
-## 📞 Contact & Support
-
-- 🐛 **Issues**: [Report bugs or request features](https://github.com/josephsenior/Agentic-design-patterns-/issues)
-- 💬 **Discussions**: [Join community discussions](https://github.com/josephsenior/Agentic-design-patterns-/discussions)
-- 📧 **Questions**: Open an issue with the "question" label
-
-Happy building! 🚀
-
+MIT — see [LICENSE](LICENSE).
