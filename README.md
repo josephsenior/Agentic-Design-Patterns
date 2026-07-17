@@ -3,13 +3,16 @@
 > 21 runnable reference implementations for understanding common LLM-agent workflow patterns.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![CI](https://github.com/josephsenior/Agentic-Design-Patterns/actions/workflows/ci.yml/badge.svg)](https://github.com/josephsenior/Agentic-Design-Patterns/actions/workflows/ci.yml)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![Stars](https://img.shields.io/github/stars/josephsenior/Agentic-Design-Patterns)](https://github.com/josephsenior/Agentic-Design-Patterns/stargazers)
 [![Issues](https://img.shields.io/github/issues/josephsenior/Agentic-Design-Patterns)](https://github.com/josephsenior/Agentic-Design-Patterns/issues)
 
 This repository is a clean-room educational reference library containing runnable implementations of 21 agent design primitives. Each directory isolates one pattern and pairs the implementation with a small practical example.
 
 The goal is not to present one universal agent framework. It is to make individual orchestration ideas easy to inspect, run, compare, and combine.
+
+> **Project status:** educational reference implementations. CI verifies repository structure and Python syntax; examples that call external model APIs are not treated as production systems or exercised end to end without credentials.
 
 ## Patterns
 
@@ -44,6 +47,7 @@ Clone the repository:
 ```bash
 git clone https://github.com/josephsenior/Agentic-Design-Patterns.git
 cd Agentic-Design-Patterns
+cp .env.example .env
 ```
 
 Move into a pattern directory, install its dependencies, and run the example:
@@ -51,7 +55,6 @@ Move into a pattern directory, install its dependencies, and run the example:
 ```bash
 cd prompt_chaining
 pip install -r requirements.txt
-cp .env.example .env
 python example.py
 ```
 

@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Validate repository structure
+        run: python scripts/validate_repository.py
+
+      - name: Compile Python examples
+        run: python -m compileall -q adaptation evaluation exception_handling exploration goal_setting guardrails human_in_loop inter_agent mcp memory multi_agent parallelization planning prioritization prompt_chaining rag reasoning reflection resource_optimization routing tool_use
